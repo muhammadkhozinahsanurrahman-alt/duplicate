@@ -161,21 +161,24 @@ export function SignupForm({ className, ...props }: React.ComponentProps<"div">)
                             </Field>
 
                             {/* BUTTON */}
-                            <Button
-                                type="submit"
-                                className="
-                                    bg-[#FF684D]
-                                    text-[#FAFAFA]
-                                    font-['Montserrat_Alternates']
-                                    font-bold
-                                    text-[12px]
-                                    shadow-[0_1px_2px_rgba(0,0,0,0.11)]
-                                    rounded-[4px]
-                                    h-[31px]
-                                "
-                            >
-                                Lanjutkan
-                            </Button>
+                            <Link href="/aktivasi" className="w-full">
+                                <Button
+                                    type="button"
+                                    className="
+            bg-[#FF684D]
+            text-[#FAFAFA]
+            font-['Montserrat_Alternates']
+            font-bold
+            text-[12px]
+            shadow-[0_1px_2px_rgba(0,0,0,0.11)]
+            rounded-[4px]
+            h-[31px]
+            w-full
+        "
+                                >
+                                    Lanjutkan
+                                </Button>
+                            </Link>
 
                             {/* SIGN IN */}
                             <FieldDescription
