@@ -1,27 +1,27 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
-import Link from 'next/link';
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
-export function LoginForm({ className, ...props }: React.ComponentProps<"div">) {
+export function LoginForm({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
   return (
-    <div
-      className={cn("flex flex-col items-center", className)}
-      {...props}
-    >
+    <div className={cn("flex flex-col items-center", className)} {...props}>
       <Card
         className="
           w-[351px]
@@ -60,7 +60,6 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
         <CardContent className="w-full p-0">
           <form className="flex flex-col gap-[12px]">
             <FieldGroup className="flex flex-col gap-[12px] w-full">
-
               {/* USERNAME */}
               <Field className="flex flex-col gap-2">
                 <FieldLabel
@@ -131,9 +130,11 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
               </Field>
 
               {/* BUTTON */}
-              <Button
-                type="submit"
-                className="
+              <div className="flex flex-row gap-2 w-full justify-center">
+                <Link href="/dashboard" className="w-full">
+                  <Button
+                    type="submit"
+                    className="
                   bg-[#FF684D]
                   text-[#FAFAFA]
                   font-['Montserrat_Alternates']
@@ -142,10 +143,13 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
                   shadow-[0_1px_2px_rgba(0,0,0,0.11)]
                   rounded-[4px]
                   h-[31px]
-                "
-              >
-                Lanjutkan
-              </Button>
+                  w-full
+                  "
+                  >
+                    Lanjutkan
+                  </Button>
+                </Link>
+              </div>
 
               {/* SIGN UP */}
               <FieldDescription
@@ -156,20 +160,19 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
                   text-center
                 "
               >
-                Belum punya akun?{' '}
-              <Link
-                href="/signup"
-                className="hover:underline font-bold"
-                style={{ color: '#FF684D' }}
-              >
-                Sign up
-              </Link>
+                Belum punya akun?{" "}
+                <Link
+                  href="/signup"
+                  className="hover:underline font-bold"
+                  style={{ color: "#FF684D" }}
+                >
+                  Sign up
+                </Link>
               </FieldDescription>
-
             </FieldGroup>
           </form>
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

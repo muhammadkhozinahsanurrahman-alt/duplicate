@@ -128,7 +128,7 @@ export function KodeAktivasiForm({ className, ...props }: React.ComponentProps<"
 
 
                 <div className="flex flex-row gap-2 w-full justify-center">
-                  <Link href="/aktivasi" className="w-full">
+                  <Link href="/dashboard" className="w-full">
                     <Button
                       type="button"
                       className="
