@@ -80,7 +80,7 @@ export default function Header() {
         <div className="relative w-12 h-12 hidden md:block">
           <div className="w-12 h-12 bg-[#E8EAEC] rounded-full overflow-hidden" />
           <img
-            src="/next.svg"
+            src="https://api.builder.io/api/v1/image/assets/TEMP/d23ae1f8399ee9e8ea71d316e4fb4a6af1a5732b?width=136"
             alt="User"
             className="absolute inset-0 w-12 h-12 rounded-full object-center"
           />
