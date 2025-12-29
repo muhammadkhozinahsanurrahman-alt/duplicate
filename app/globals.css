@@ -121,20 +121,3 @@
   }
 }
 
-.simple-scroll::-webkit-scrollbar {
-  width: 6px;
-}
-
-.simple-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.simple-scroll::-webkit-scrollbar-thumb {
-  background-color: #ff684d;
-  border-radius: 999px;
-}
-
-.simple-scroll {
-  scrollbar-width: thin;
-  scrollbar-color: #ff684d transparent;
-}
