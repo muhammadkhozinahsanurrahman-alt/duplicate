@@ -6,12 +6,12 @@ export default function ProfileCard() {
     <div className="w-full h-full flex flex-col items-center justify-center text-center">
       {/* Avatar */}
       <div className="relative mb-4">
-        <div className="w-28 h-28 rounded-full border-4 border-orange-400 overflow-hidden">
+        <div className="w-35 h-35 rounded-full border-4 border-orange-400 overflow-hidden">
           <Image
             src="/avatar.png" // ganti dengan image kamu
             alt="Profile"
-            width={112}
-            height={112}
+            width={135}
+            height={135}
             className="object-cover"
           />
         </div>

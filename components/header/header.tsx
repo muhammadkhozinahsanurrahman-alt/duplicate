@@ -22,9 +22,7 @@ export default function Header() {
   const buttonClass = (path: string) =>
     clsx(
       "px-6 py-2 h-[41px] rounded-[50px] font-['Montserrat Alternates'] font-semibold text-[14px]",
-      isActive(path)
-        ? "bg-[#FF684D] text-white"
-        : "bg-[#E8EAEC] text-black"
+      isActive(path) ? "bg-[#FF684D] text-white" : "bg-[#E8EAEC] text-black"
     );
 
   return (
@@ -86,16 +84,29 @@ export default function Header() {
       {/* ================= MOBILE MENU ================= */}
       {open && (
         <div className="fixed inset-0 z-50 bg-black/30">
-          <div className="bg-white h-full p-6 relative">
+          {/* Floating Card */}
+          <div
+            className="
+        absolute
+        top-6 right-4
+        w-[280px]
+        bg-white
+        rounded-[24px]
+        shadow-2xl
+        p-6
+      "
+          >
+            {/* CLOSE */}
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-6 right-6"
+              className="absolute top-4 right-4"
             >
-              <X size={28} color="#FF684D" />
+              <X size={24} color="#FF684D" />
             </button>
 
-            <div className="flex justify-center mt-10">
-              <div className="w-20 h-20 rounded-full overflow-hidden bg-[#E8EAEC]">
+            {/* AVATAR */}
+            <div className="flex justify-center mt-2">
+              <div className="w-14 h-14 rounded-full overflow-hidden bg-[#E8EAEC]">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/d23ae1f8399ee9e8ea71d316e4fb4a6af1a5732b?width=136"
                   alt="User"
@@ -104,7 +115,8 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="mt-12 flex flex-col gap-6 text-center">
+            {/* MENU */}
+            <div className="mt-6 flex flex-col gap-4 text-center">
               {menu.map((item) => (
                 <Button
                   key={item.path}
@@ -112,7 +124,12 @@ export default function Header() {
                     router.push(item.path);
                     setOpen(false);
                   }}
-                  className={buttonClass(item.path)}
+                  className={clsx(
+                    "h-[44px] rounded-full font-['Montserrat Alternates'] font-semibold text-[14px]",
+                    isActive(item.path)
+                      ? "bg-[#FF684D] text-white"
+                      : "bg-[#E8EAEC] text-black"
+                  )}
                 >
                   {item.label}
                 </Button>
