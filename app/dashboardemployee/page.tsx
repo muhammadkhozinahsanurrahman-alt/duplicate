@@ -1,4 +1,3 @@
-
 import EmployeeInformationCard from "@/components/employee/employeeinformation";
 import PayrollTable from "@/components/employee/payrolldetails";
 import ProfileCard from "@/components/employee/profilecard";
@@ -51,8 +50,22 @@ export default function DashboardEmployeePage() {
           </div>
 
           {/* ===== Card 3 (1/2) ===== */}
-          <div className="md:col-span-2 h-[315px] bg-white rounded-xl shadow p-4 flex flex-col">
-            <div className="flex items-center justify-between">
+          <div className="relative md:col-span-2 h-[315px] bg-white rounded-xl shadow p-4 flex flex-col overflow-hidden">
+            {/* ===== Background Image ===== */}
+            <img
+              src="/bg.png" // ganti sesuai path gambarmu
+              alt=""
+              className="
+      absolute 
+      right-0 bottom-0
+      w-1/4 h-auto 
+      pointer-events-none
+      select-none
+    "
+            />
+
+            {/* ===== Header ===== */}
+            <div className="relative flex items-center justify-between z-10">
               <h3 className="text-sm font-semibold text-gray-800">
                 Profile Detail
               </h3>
@@ -62,14 +75,25 @@ export default function DashboardEmployeePage() {
               </div>
             </div>
 
-            <div className="flex-1">
-                <ProfileDetailCard />
+            {/* ===== Content ===== */}
+            <div className="relative flex-1 z-10">
+              <ProfileDetailCard />
             </div>
           </div>
 
           {/* ===== Card 4 (1/2) ===== */}
-          <div className="md:col-span-2 h-[315px] bg-white rounded-xl shadow p-4 flex flex-col">
-            <div className="flex items-center justify-between">
+          <div className="relative md:col-span-2 h-[315px] bg-white rounded-xl shadow p-4 flex flex-col overflow-hidden">
+            {/* ===== Background Image (kanan 1/4) ===== */}
+            <div className="absolute right-0 bottom-0 w-1/2 h-full pointer-events-none">
+              <img
+                src="/bg1.png" // ganti sesuai asset kamu
+                alt="bg"
+                className="object-contain object-bottom"
+              />
+            </div>
+
+            {/* ===== Header ===== */}
+            <div className="relative z-10 flex items-center justify-between">
               <h3 className="text-sm font-semibold text-gray-800">
                 Employee Information
               </h3>
@@ -79,8 +103,9 @@ export default function DashboardEmployeePage() {
               </div>
             </div>
 
-            <div className="flex-1 mt-5">
-                <EmployeeInformationCard />
+            {/* ===== Content ===== */}
+            <div className="relative z-10 flex-1 mt-5">
+              <EmployeeInformationCard />
             </div>
           </div>
         </section>

@@ -3,16 +3,7 @@ import { User, IdCard } from "lucide-react";
 
 export default function ProfileDetailCard() {
   return (
-    <div className="w-full h-full relative">
-      {/* Decorative image */}
-      <div className="absolute right-0 bottom-0 opacity-20 pointer-events-none">
-        <Image
-          src="/pattern.png" // ganti dengan pattern kamu
-          alt="decoration"
-          width={160}
-          height={160}
-        />
-      </div>
+    <div className="w-full h-full relative p-5">
 
       <div className="flex h-full gap-3">
         {/* ===== Personal Info ===== */}
