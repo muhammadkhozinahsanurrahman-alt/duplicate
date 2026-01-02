@@ -193,7 +193,7 @@ export function ManualAktivasiForm2({ className, ...props }: React.ComponentProp
               <FieldGroup className="flex flex-col gap-[12px] w-full">
 
                 <div className="flex flex-row gap-2 w-full justify-center">
-                  <Link href="/dashboard" className="w-full">
+                  <Link href="/dashboardemployee" className="w-full">
                     <Button
                       type="button"
                       className="
